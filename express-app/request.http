@@ -1,2 +1,17 @@
-GET http://localhost:3000/users
-Accept: application/json
+GET http://localhost:3000/users?auth=true
+
+### 3. GET user by id 1 (с auth)
+GET http://localhost:3000/users/1?auth=true
+
+###
+POST http://localhost:3000/users?auth=true
+Content-Type: application/json
+
+{
+  "name": "Саша"
+}
+
+###
+GET http://localhost:3000/users/3?auth=true
+
+###

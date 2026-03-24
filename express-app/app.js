@@ -17,7 +17,7 @@ app.use((req, res, next) => {
     const isAuthenticated = req.query.auth === 'true';
 
     if (!isAuthenticated) {
-        return res.status(401)
+        return res.status(401).json({ error: 'Unauthorized' })
     }
 
     next();
