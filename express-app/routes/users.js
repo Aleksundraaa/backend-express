@@ -15,4 +15,13 @@ router.get('/', function(req, res, next) {
   });
 });
 
+router.post('/', function(req, res, next) {
+  let newUserReq = req.body;
+  let newUser = {
+    "id": newUserReq.id,
+    "name": newUserReq.name,
+  }
+  res.status(201).json(newUser);
+})
+
 module.exports = router;
